@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 import { AppContext } from '../../context/app.cotext';
 import { PageItem } from '../../interfaces/menu.interface';
 
-const Saerch = ({ className, ...props }: SearchProps): JSX.Element => {
+const Search = ({ className, ...props }: SearchProps): JSX.Element => {
 	const { menu } = useContext(AppContext);
 	const [search, setSearch] = useState('');
 	const [response, setResponse] = useState<PageItem[]>([]);
@@ -53,4 +53,4 @@ const Saerch = ({ className, ...props }: SearchProps): JSX.Element => {
 	);
 };
 
-export default Saerch;
+export default Search;

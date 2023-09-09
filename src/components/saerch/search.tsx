@@ -1,5 +1,5 @@
-import { SearchProps } from './saerch.props';
-import styles from './saerch.module.css';
+import { SearchProps } from './search.props';
+import styles from './search.module.css';
 import cn from 'classnames';
 import Input from '../input/input';
 import Button from '../button/button';
@@ -7,7 +7,7 @@ import SearchIcon from './search.svg';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-const Saerch = ({ className, ...props }: SearchProps): JSX.Element => {
+const Search = ({ className, ...props }: SearchProps): JSX.Element => {
 	const [search, setSearch] = useState('');
 	const router = useRouter();
 
@@ -26,4 +26,4 @@ const Saerch = ({ className, ...props }: SearchProps): JSX.Element => {
 	);
 };
 
-export default Saerch;
+export default Search;

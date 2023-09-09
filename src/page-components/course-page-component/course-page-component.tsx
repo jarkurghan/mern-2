@@ -17,18 +17,6 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 		dispatch({ type: 'reset', initialState: products });
 	}, [products]);
 
-	const spring = {
-		type: 'spring',
-		stiffness: 500,
-		damping: 10,
-	};
-
-	const animations = {
-		initial: { scale: 0 },
-		animate: { scale: 1 },
-		exit: { scale: 1 },
-	};
-
 	return (
 		<div className={styles.wrapper}>
 			{/* TITLE */}
@@ -40,7 +28,7 @@ const CoursePageComponent = ({ page, products }: CoursePageComponentProps): JSX.
 			{/* PRODUCTS */}
 			<AnimatePresence>
 				{state.products &&
-					state.products.map((c, idx) => <Product key={idx} layout transition={spring} {...animations} product={c} />)}
+					state.products.map((c, idx) => <Product key={idx} product={c} />)}
 			</AnimatePresence>
 
 			{/* VACATIONS */}

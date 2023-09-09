@@ -1,6 +1,6 @@
 import { withLayout } from '../layout/layout';
 
-const Search = () => {
+const Search = () => { 
 	return <div>Search</div>;
 };
 
